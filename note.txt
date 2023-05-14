@@ -1,0 +1,2 @@
+Repository:	https://github.com/Almas-Ali/assignments/
+Deplyed: 	https://almas-ali.github.io/assignments/ 
