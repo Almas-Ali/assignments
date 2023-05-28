@@ -1,4 +1,8 @@
-Question: Write a program that generates a multiplication table for a given number using a for loop.
+Building a Digital Clock using JavaScript
+
+ 
+
+In this assignment, you will be building a digital clock using JavaScript. The clock will display the current time and update every second.
 
  
 
@@ -6,19 +10,46 @@ Instructions:
 
  
 
-Create a JavaScript function called "multiplicationTable" that takes a single argument "num" (an integer) as input.
-
-Inside the function, create a for loop that iterates from 1 to 10.
-
-Inside the loop, multiply the current iteration number by the input "num" to generate the product.
-
-Log the product to the console in the format "num x iteration = product".
-
-Test the function with different input numbers to generate multiplication tables.
+Create an HTML file with a <div> element that will display the clock.
 
  
 
-What you should Submit :
+Add a <script> element to the HTML file and write your JavaScript code inside it.
 
-You should submit your github repository link.
+ 
 
+Create a function that will update the clock every second using the setInterval() method. This function should:
+
+ 
+
+a. Get the current time using the Date() object.
+
+ 
+
+b. Format the time into hours, minutes, and seconds using string manipulation.
+
+c. Display the formatted time in the <div> element.
+
+ 
+
+Call the function once to initialize the clock.
+
+ 
+
+Test your clock by refreshing the page and verifying that it updates every second.
+
+ 
+
+Add some styling to your clock using CSS (Optional)
+
+ 
+
+Submit Instructions : 
+
+ 
+
+1.Submit your completed assignment, including the HTML and CSS files, and a brief description of how you implemented the JavaScript functionality.
+
+2. Submit your github repository link
+
+3.Create a note.txt file in the repository and include your live link of your deployed version.

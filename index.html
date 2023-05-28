@@ -4,32 +4,60 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Assignment 3</title>
+    <title>JavaScript Clock - Assignment 4</title>
+    <style>
+        body {
+            background-color: #111005;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        @font-face {
+            font-family: 'digital';
+            src: url('./digital.ttf');
+        }
+
+        #clock {
+            font-size: 100px;
+            text-align: center;
+            color: red;
+            font-family: 'digital';
+            border: 5px solid #000;
+            border-radius: 10%;
+            padding: 20px;
+            background-color: #222;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 
 <body>
-	<h1>Ostad Assignment 3</h1>
-	<p>Check the console for <strong>multiplicationTable(num)</strong> Javascript function</p>
-
+    <div id="clock"></div>
     <script type="text/javascript">
-    // This function takes int number as input and create a multiplication table and console log the output.
-    function multiplicationTable(num) {
-        for (let i = 1; i <= 10; i++) {
-            const product = num * i;
-            console.log(`${num} x ${i} = ${product}`);
-        }
+    function updateClock() {
+        var clockElement = document.getElementById('clock');
+        var currentTime = new Date();
+        var hours = currentTime.getHours();
+        var minutes = currentTime.getMinutes();
+        var seconds = currentTime.getSeconds();
+
+        // Format the time into two digits if they are less than 10
+        hours = (hours < 10 ? '0' : '') + hours;
+        minutes = (minutes < 10 ? '0' : '') + minutes;
+        seconds = (seconds < 10 ? '0' : '') + seconds;
+
+        // Display the formatted time in the clock element
+        clockElement.textContent = hours + ':' + minutes + ':' + seconds;
     }
 
-    // Test multiplication tables
-    console.log('Multiplication table of 3')
-    multiplicationTable(3);
-    console.log('Multiplication table of 4')
-    multiplicationTable(4);
-    console.log('Multiplication table of 9')
-    multiplicationTable(9);
-    console.log('End')
-    </script>
+    // Call the updateClock function once to initialize the clock
+    updateClock();
 
+    // Update the clock every second using setInterval()
+    setInterval(updateClock, 1000);
+    </script>
 </body>
 
 </html>
